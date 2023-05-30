@@ -1,30 +1,34 @@
-import * as React from 'react';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
+import * as React from "react";
+import InputLabel from "@mui/material/InputLabel";
+import MenuItem from "@mui/material/MenuItem";
 //import ListSubheader from '@mui/material/ListSubheader';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
+import FormControl from "@mui/material/FormControl";
+import Select from "@mui/material/Select";
 
 export default function GroupedSelect() {
   return (
     <div>
       <FormControl sx={{ m: 1, width: "12rem" }}>
-        <InputLabel htmlFor="grouped-native-select"
-        >Month</InputLabel>
-        <Select native defaultValue="" id="grouped-native-select" label="Grouping">
+        <InputLabel htmlFor="grouped-native-select">Month</InputLabel>
+        <Select
+          native
+          defaultValue=""
+          id="grouped-native-select"
+          label="Grouping"
+        >
           <option aria-label="None" value="" />
-            <option value={1}>January</option>
-            <option value={2}>February</option>
-            <option value={3}>March</option>
-            <option value={4}>April</option>
-            <option value={5}>May</option>
-            <option value={6}>June</option>
-            <option value={7}>July</option>
-            <option value={8}>August</option>
-            <option value={9}>September</option>
-            <option value={10}>October</option>
-            <option value={11}>November</option>
-            <option value={12}>December</option> 
+          <option value={1}>January</option>
+          <option value={2}>February</option>
+          <option value={3}>March</option>
+          <option value={4}>April</option>
+          <option value={5}>May</option>
+          <option value={6}>June</option>
+          <option value={7}>July</option>
+          <option value={8}>August</option>
+          <option value={9}>September</option>
+          <option value={10}>October</option>
+          <option value={11}>November</option>
+          <option value={12}>December</option>
         </Select>
       </FormControl>
 
@@ -34,7 +38,7 @@ export default function GroupedSelect() {
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-         
+
           <MenuItem value={1}>1</MenuItem>
           <MenuItem value={2}>2</MenuItem>
           <MenuItem value={3}>3</MenuItem>
@@ -69,14 +73,13 @@ export default function GroupedSelect() {
         </Select>
       </FormControl>
 
-      
       <FormControl sx={{ m: 1, minWidth: 120 }}>
         <InputLabel htmlFor="grouped-select">Year</InputLabel>
         <Select defaultValue="" id="grouped-select" label="Grouping">
           <MenuItem value="">
             <em>None</em>
           </MenuItem>
-         
+
           <MenuItem value={1}>2023</MenuItem>
           <MenuItem value={2}>2022</MenuItem>
           <MenuItem value={3}>2021</MenuItem>
@@ -115,12 +118,8 @@ export default function GroupedSelect() {
           <MenuItem value={36}>1988</MenuItem>
           <MenuItem value={37}>1987</MenuItem>
           <MenuItem value={38}>1986</MenuItem>
-          
         </Select>
       </FormControl>
     </div>
   );
 }
-
-
-
