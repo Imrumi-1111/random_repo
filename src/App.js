@@ -1,6 +1,6 @@
 import './App.css';
 import SignIn from './components/pages/LoginPage/login';
-//import Details from './components/pages/Details/Details';
+import Details from './components/pages/Details/Details';
 //import Home from './components/pages/Homepage/home';
 import SignUp from './components/pages/RegisterPage/register';
 
@@ -10,8 +10,8 @@ function App() {
       {/* <Home/> */}
       <div>
         <SignIn/>
-      {/* <SignUp/> */}
-      {/* <Details/> */}
+      <SignUp/>
+      <Details/>
       </div>
     </div>
   );
