@@ -10,7 +10,9 @@ export default function GoogleButton() {
             sx={{
                 textTransform : "none",
                 width :"19rem",
-                color:"black"
+                color:"black",
+                marginTop:"20px",
+                marginBottom:"30px",
     
             }}
             > {<FcGoogle />} Sign up with Google</Button>

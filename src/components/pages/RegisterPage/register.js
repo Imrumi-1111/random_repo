@@ -17,19 +17,13 @@ export default function SignUp() {
       <div className={styles.body}>
         <h1>Join Twitter today</h1>
         <GoogleButton />
-        <br />
-        <br />
         <AppleButton />
         <br />
         <br />
         <div className={styles.or}>
           <span>or</span>
         </div>
-        <br />
-        <br />
         <CreateAccountBtn />
-        <br />
-        <br />
         <Text />
       </div>
     </div>

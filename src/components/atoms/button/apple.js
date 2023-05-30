@@ -9,7 +9,8 @@ export default function AppleButton(){
             sx={{
                 textTransform : "none",
                 width :"19rem",
-                color: "black"
+                color: "black",
+                marginBottom:"30px",
             }}
             > {<FaApple/>} Sign up with Apple </Button>
 

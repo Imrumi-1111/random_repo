@@ -15,7 +15,7 @@ const SignIn = () => {
   const [usererr, setusererr] = useState(false);
   const [data, setdata] = useState([]);
 
-  const localEmail = email;
+  // const localEmail = email;
 
   function userHandle(e) {
     setdata(e.target.value);
@@ -41,13 +41,8 @@ const SignIn = () => {
         </div>
         <div className={styles.body}>
           <h1>Sign in to Twitter</h1>
-          <br />
           <GoogleButton />
-          <br />
-          <br />
           <AppleButton />
-          <br />
-          <br />
           <div className={styles.content3}>
             <span>or</span>
           </div>
@@ -55,14 +50,12 @@ const SignIn = () => {
           <br />
           <TextField
             onChange={userHandle}
-            style={{ width: "63%" }}
+            style={{ width: "63%", marginBottom: "30px" }}
             id="outlined-basic"
             label="Phone , Email or Username"
             variant="outlined"
             value={email}
           />
-          <br />
-          <br />
           <Button
             onClick={onclick}
             className={styles.btn}
@@ -71,13 +64,12 @@ const SignIn = () => {
               background: "black",
               width: "63%",
               borderRadius: "5%",
+              marginBottom: "30px",
             }}
             variant="contained"
           >
             Next
           </Button>
-          <br />
-          <br />
           <Button
             className={styles.btn}
             variant="outlined"
