@@ -1,5 +1,4 @@
 import Button from "@mui/material/Button";
-//import { black } from '@material-ui/core/colors';
 import { useNavigate } from "react-router-dom";
 
 export default function CreateAccountBtn() {
@@ -13,7 +12,9 @@ export default function CreateAccountBtn() {
         sx={{
           textTransform: "none",
           width: "19rem",
-          backgroundColor: "black",
+          backgroundColor: "white",
+          marginTop: "30px",
+          marginBottom:"5px",
         }}
         onClick={() => navigate("/details")}
       >

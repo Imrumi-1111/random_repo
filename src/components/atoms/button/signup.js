@@ -9,7 +9,7 @@ export default function SignUpButton() {
         variant="outlined"
         onClick={() => navigate("/home")}
         sx={{
-          backgroundColor: "#B2BEB5",
+          backgroundColor:"white",
           width: "30rem",
         }}
       >

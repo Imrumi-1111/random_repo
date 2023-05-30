@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import styles from "./text.module.css";
+
 export default function Text() {
   return (
-    <div>
+    <div className={styles.terms_policy}>
       <p>
         By signing up, you agree to the{" "}
         <Link to="https://twitter.com/en/tos">Terms of Service</Link>
