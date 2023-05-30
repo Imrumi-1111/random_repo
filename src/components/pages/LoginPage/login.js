@@ -10,30 +10,29 @@ import { Link } from 'react-router-dom';
 
 const SignIn = () => {
   return (
-    <div className={styles.body}>
+    <div className={styles.page}>
       <div className={styles.Icon}>
         <RxCross2 />
         <FaTwitter
           color='skyblue'
         />
       </div>
-      <div className={styles.page}>
+      <div className={styles.body}>
         <h1>Sign in to Twitter</h1>
-        <br />
         <br />
         <GoogleButton />
         <br />
-        <br />
+        <br/>
         <AppleButton />
         <br />
-        <br />
+        <br/>
         <div className={styles.content3}>
           <span>or</span>
         </div>
 
         <br />
         <TextField
-          style={{ width: "50%" }}
+          style={{ width: "63%" }}
           id="outlined-basic"
           label="Phone , Email or Username"
           variant="outlined"
@@ -42,7 +41,7 @@ const SignIn = () => {
         <br />
         <Button
           className={styles.btn}
-          style={{ textTransform: "none", background: "black", width: "50%", borderRadius: "5%" }}
+          style={{ textTransform: "none", background: "black", width: "63%", borderRadius: "5%" }}
           variant="contained"
         >Next
         </Button>
@@ -50,7 +49,7 @@ const SignIn = () => {
         <br />
         <Button className={styles.btn} variant="outlined"
           sx={{
-            width: "50%", borderRadius: "5%", textTransform: "none", color: "black"
+            width: "63%", borderRadius: "5%", textTransform: "none", color: "black"
           }}><b>
             Forgot Password?</b>
         </Button>

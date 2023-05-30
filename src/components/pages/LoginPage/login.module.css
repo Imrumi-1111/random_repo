@@ -1,12 +1,24 @@
+.page{
+    border: 1rem solid white;
+    margin: auto;
+    margin-top: 6%;
+    width: 40rem;
+    height: 45rem;
+    align-items: center;
+    box-shadow: 0rem 0rem 6rem;
+    border-radius: 3%;
+}
+
 .body {
-  border: 1rem solid white;
-  margin: auto;
-  margin-top: 8%;
-  width: 40rem;
-  height: 45rem;
-  text-align: center;
-  box-shadow: 0rem 0rem 6rem;
-  border-radius: 3%;
+    border: 1rem solid white;
+    margin: auto;
+    width: 30rem;
+    height: 30rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3%;
 }
 
 .Icon {
@@ -18,6 +30,10 @@
 .content3 {
   border-bottom: 1px solid black;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem;
   margin-bottom: 1rem;
   & > span {
     position: absolute;

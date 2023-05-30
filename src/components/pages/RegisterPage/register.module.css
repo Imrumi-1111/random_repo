@@ -1,17 +1,49 @@
-.body {
+.b{
   border: 1rem solid white;
   margin: auto;
   margin-top: 8%;
   width: 40rem;
   height: 45rem;
-  text-align: center;
+  align-items: center;
   box-shadow: 0rem 0rem 6rem;
+  border-radius: 3%;
+}
+.body {
+  border: 1rem solid white;
+  margin: auto;
+  width: 30rem;
+  height: 30rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-radius: 3%;
 }
 
 .Icon {
+  position: sticky;
   margin-top: 3%;
   display: flex;
+  flex-direction: row;
+  align-items: start;
+  padding-left: 5px;
   gap: 17rem;
   font-size: 2rem;
+}
+.or{
+  border-bottom: 1px solid black;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem;
+  margin-bottom: 1rem;
+  & > span {
+    position: absolute;
+    left: calc(20% 1.5px);
+    top: -13.5px;
+    background-color: white;
+    padding: 0 0.5rem;
+  }
+
 }
