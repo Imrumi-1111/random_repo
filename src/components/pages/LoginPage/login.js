@@ -6,25 +6,28 @@ import Button from "@mui/material/Button";
 import { FaTwitter } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import styles from "./login.module.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Alert from "@mui/material/Alert";
 import { useState } from "react";
 
 const SignIn = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
-  const [usererr, setusererr] = useState(false);
+  const [usererr, setusererr] = useState(true);
   const [data, setdata] = useState([]);
-
-  // const localEmail = email;
 
   function userHandle(e) {
     setdata(e.target.value);
     setEmail(e.target.value);
   }
 
+  function handlenavigate() {
+    navigate("/password");
+  }
+
   function onclick() {
     localStorage.setItem("email", email);
-    alert("Data Stored Successfully");
+
     if (data.length < 3) {
       setusererr(true);
     } else {
@@ -91,7 +94,7 @@ const SignIn = () => {
               <strong>Sorry, we could not find your account.</strong>
             </Alert>
           ) : (
-            " "
+            handlenavigate()
           )}
         </div>
       </div>

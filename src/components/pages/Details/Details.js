@@ -12,10 +12,24 @@ export default function Details() {
   const [phone, setPhone] = useState("");
   const [useEmail, setUseEmail] = useState("");
 
+  const Storage = localStorage.getItem("signupData")
+    ? JSON.parse(localStorage.getItem("signupData"))
+    : [];
+
   const handleToggle = (e) => {
     e.preventDefault();
     setUseEmail(!useEmail);
   };
+
+  function handleSignup() {
+    const temp = {
+      name: name,
+      email: email,
+      phone: phone,
+    };
+
+    localStorage.setItem("signupData", JSON.stringify([...Storage, temp]));
+  }
 
   return (
     <div className={styles.Details}>
@@ -23,9 +37,6 @@ export default function Details() {
         <RxCross2 />
       </div>
       <h1>Create your account</h1>
-
-      {/* <Input /> */}
-
       <div>
         <OutlinedInput
           value={name}
@@ -64,16 +75,11 @@ export default function Details() {
       <a href="/" onClick={handleToggle} className="emailtoggle">
         {useEmail ? "Use phone instead" : "Use email instead"}
       </a>
-
-      {/* <p className={styles.p}>
-        <Link to="">Use email instead</Link>
-      </p> */}
-
       <DetailsText />
       <GroupedSelect />
       <br />
       <br />
-      <SignUpButton />
+      <SignUpButton handleSignup={handleSignup} />
     </div>
   );
 }
