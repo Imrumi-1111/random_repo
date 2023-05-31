@@ -15,6 +15,7 @@ export default function CreateAccountBtn() {
           backgroundColor: "white",
           marginTop: "30px",
           marginBottom:"5px",
+          borderRadius:"15px"
         }}
         onClick={() => navigate("/details")}
       >

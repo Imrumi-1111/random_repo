@@ -43,7 +43,7 @@ export default function Details() {
           placeholder="Name"
           onChange={(e) => setName(e.target.value)}
           sx={{
-            width: "30rem",
+            width: "25rem",
             marginBottom: "20px",
           }}
         />
@@ -55,7 +55,8 @@ export default function Details() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             sx={{
-              width: "30rem",
+              width: "25rem",
+              height: "2.5rem",
             }}
           />
         </div>
@@ -67,19 +68,24 @@ export default function Details() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             sx={{
-              width: "30rem",
+              width: "25rem",
+              height: "2.5rem",
             }}
           />
         </div>
       )}
-      <a href="/" onClick={handleToggle} className="emailtoggle">
+      <a href="/" onClick={handleToggle} className={styles.emailtoggle}>
         {useEmail ? "Use phone instead" : "Use email instead"}
       </a>
-      <DetailsText />
-      <GroupedSelect />
-      <br />
-      <br />
-      <SignUpButton handleSignup={handleSignup} />
+      <div>
+        <DetailsText />
+      </div>
+      <div>
+        <GroupedSelect />
+      </div>
+      <div className={styles.btn}>
+        <SignUpButton handleSignup={handleSignup} />
+      </div>
     </div>
   );
 }

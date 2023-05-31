@@ -1,0 +1,21 @@
+.Home {
+    border: 1rem solid white;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+  
+  .SearchBarTwitter {
+    border: 1rem solid white;
+  }
+  
+  .Trending {
+    margin: auto;
+    margin-right: 1%;
+    border: 1rem solid whitesmoke;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    width: 24rem;
+    height: 25rem;
+  }
+  
