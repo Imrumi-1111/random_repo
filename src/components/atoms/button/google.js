@@ -13,6 +13,7 @@ export default function GoogleButton() {
                 color:"black",
                 marginTop:"20px",
                 marginBottom:"30px",
+                borderRadius:"15px",
     
             }}
             > {<FcGoogle />} Sign up with Google</Button>

@@ -8,7 +8,7 @@ import Select from "@mui/material/Select";
 export default function GroupedSelect() {
   return (
     <div>
-      <FormControl sx={{ m: 1, width: "12rem" }}>
+      <FormControl sx={{ m: 1, width: 150 }}>
         <InputLabel htmlFor="grouped-native-select">Month</InputLabel>
         <Select
           native
@@ -32,7 +32,7 @@ export default function GroupedSelect() {
         </Select>
       </FormControl>
 
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
+      <FormControl sx={{ m: 1, width: 100 }}>
         <InputLabel htmlFor="grouped-select">Day</InputLabel>
         <Select defaultValue="" id="grouped-select" label="Grouping">
           <MenuItem value="">
@@ -73,7 +73,7 @@ export default function GroupedSelect() {
         </Select>
       </FormControl>
 
-      <FormControl sx={{ m: 1, minWidth: 120 }}>
+      <FormControl sx={{ m: 1, width: 100 }}>
         <InputLabel htmlFor="grouped-select">Year</InputLabel>
         <Select defaultValue="" id="grouped-select" label="Grouping">
           <MenuItem value="">

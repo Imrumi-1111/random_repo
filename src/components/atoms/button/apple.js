@@ -11,6 +11,7 @@ export default function AppleButton(){
                 width :"19rem",
                 color: "black",
                 marginBottom:"30px",
+                borderRadius:"15px",
             }}
             > {<FaApple/>} Sign up with Apple </Button>
 

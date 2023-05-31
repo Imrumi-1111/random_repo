@@ -1,13 +1,15 @@
 import React from "react";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import { FaTwitter } from "react-icons/fa";
+import { RxCross2 } from "react-icons/rx";
 import TextField from "@mui/material/TextField";
 import styles from "./Password.module.css";
 import Button from "@mui/material/Button";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Alert from "@mui/material/Alert";
 
 export default function Password() {
+  const navigate = useNavigate();
   const [password, setpassword] = useState("");
   const [message, setmessage] = useState(false);
   function handleChange(e) {
@@ -21,61 +23,50 @@ export default function Password() {
   }
 
   return (
-    <div
-      style={{
-        height: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "rgba(0, 0, 0, 0.4)",
-      }}
-    >
-      <div
-        style={{
-          width: "550px",
-          height: "600px",
-          margin: "0 auto",
-          height: "600px",
-          background: "white",
-          borderRadius: "20px",
-        }}
-      >
-        <div style={{ textAlign: "center" }}>
-          <TwitterIcon
-            sx={{ fontSize: 40 }}
-            style={{ color: "rgb(29, 155, 240)" }}
-          />
+    <div>
+      <div className={styles.page}>
+        <div className={styles.Icon}>
+          <RxCross2 />
+          <FaTwitter color="#50b7f5" />
         </div>
-        <div
-          style={{
-            width: "440px",
-            margin: "0 auto",
-            position: "relative",
-            height: "500px",
-          }}
-        >
+        <div className={styles.body}>
           <h1>Enter your password</h1>
           <div className={styles.textinput}>
             <TextField
+              type="password"
               onChange={handleChange}
               id="filled-multiline-flexible"
               fullWidth
               label="password"
               variant="outlined"
+              sx={{
+                width: "19rem",
+                height: "1rem",
+              }}
             />
+            <div className={styles.password}>
+              {" "}
+              <Link to=""> Forgot Password?</Link>
+            </div>
           </div>
-          <Link to=""> Forgot Password?</Link>
           <Button
-            onClick={handleClick}
+            onClick={() => {
+              navigate("/home");
+              handleClick();
+            }}
             className={styles.btn}
             variant="contained"
+            sx={{
+              textTransfer: "none",
+              marginTop: "15rem",
+            }}
           >
             Log In
           </Button>
           <div className={styles.links}>
             <p>
               {" "}
-              Don't have an account? <Link to=""> Sign up</Link>
+              Don't have an account? <Link to="/register"> Sign up</Link>
             </p>
           </div>
           {message ? (

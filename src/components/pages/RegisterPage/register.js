@@ -11,15 +11,13 @@ export default function SignUp() {
     <div className={styles.b}>
       <div className={styles.Icon}>
         <RxCross2 />
-        <FaTwitter color="skyblue" />
+        <FaTwitter color="#50b7f5" />
       </div>
 
       <div className={styles.body}>
         <h1>Join Twitter today</h1>
         <GoogleButton />
         <AppleButton />
-        <br />
-        <br />
         <div className={styles.or}>
           <span>or</span>
         </div>

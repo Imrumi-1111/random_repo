@@ -1,17 +1,21 @@
 import Button from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
 
-export default function SignUpButton({handleSignup}) {
+export default function SignUpButton({ handleSignup }) {
   const navigate = useNavigate();
   return (
     <div>
       <Button
         variant="outlined"
-        // onClick={() => navigate("/home")}
-        onClick={handleSignup}
+        onClick={() => {
+          navigate("/login");
+          handleSignup();
+        }}
         sx={{
-          backgroundColor:"white",
-          width: "30rem",
+          backgroundColor: "white",
+          width: "25rem",
+          borderRadius: "15px",
+          textTransform: "none",
         }}
       >
         Sign Up

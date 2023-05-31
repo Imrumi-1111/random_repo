@@ -40,7 +40,7 @@ const SignIn = () => {
       <div className={styles.page}>
         <div className={styles.Icon}>
           <RxCross2 />
-          <FaTwitter color="skyblue" />
+          <FaTwitter color="#50b7f5" />
         </div>
         <div className={styles.body}>
           <h1>Sign in to Twitter</h1>
@@ -50,10 +50,9 @@ const SignIn = () => {
             <span>or</span>
           </div>
 
-          <br />
           <TextField
             onChange={userHandle}
-            style={{ width: "63%", marginBottom: "30px" }}
+            style={{ width: "19rem", marginBottom: "30px" }}
             id="outlined-basic"
             label="Phone , Email or Username"
             variant="outlined"
@@ -65,9 +64,9 @@ const SignIn = () => {
             style={{
               textTransform: "none",
               background: "black",
-              width: "63%",
-              borderRadius: "5%",
+              width: "19rem",
               marginBottom: "30px",
+              borderRadius: "15px",
             }}
             variant="contained"
           >
@@ -77,25 +76,27 @@ const SignIn = () => {
             className={styles.btn}
             variant="outlined"
             sx={{
-              width: "63%",
-              borderRadius: "5%",
+              width: "19rem",
+              borderRadius: "15px",
               textTransform: "none",
               color: "black",
             }}
           >
             <b>Forgot Password?</b>
           </Button>
-          <div style={{ marginTop: "4rem", opacity: 0.8 }}>
+          <div style={{ marginTop: "2rem", opacity: 0.8 }}>
             <b>Don't have an account? </b>
             <Link to="/register">Sign up</Link>
           </div>
-          {usererr ? (
-            <Alert severity="info">
-              <strong>Sorry, we could not find your account.</strong>
-            </Alert>
-          ) : (
-            handlenavigate()
-          )}
+          <div className={styles.Alert}>
+            {usererr ? (
+              <Alert severity="info">
+                <strong>Sorry, we could not find your account.</strong>
+              </Alert>
+            ) : (
+              handlenavigate()
+            )}
+          </div>
         </div>
       </div>
     </div>
