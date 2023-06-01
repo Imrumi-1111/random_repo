@@ -12,9 +12,15 @@ import { useState } from "react";
 
 const SignIn = () => {
   const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
-  const [usererr, setusererr] = useState(true);
+  const [usererr, setusererr] = useState(false);
   const [data, setdata] = useState([]);
+  const [alert, setalert] = useState(false);
+
+  function forgothandle() {
+    navigate("/forgot");
+  }
 
   function userHandle(e) {
     setdata(e.target.value);
@@ -28,10 +34,11 @@ const SignIn = () => {
   function onclick() {
     localStorage.setItem("email", email);
 
-    if (data.length < 3) {
-      setusererr(true);
-    } else {
+    if (data.length < 10) {
       setusererr(false);
+      setalert(true);
+    } else {
+      setusererr(true);
     }
   }
 
@@ -40,8 +47,10 @@ const SignIn = () => {
       <div className={styles.page}>
         <div className={styles.Icon}>
           <RxCross2 />
+
           <FaTwitter color="#50b7f5" />
         </div>
+
         <div className={styles.body}>
           <h1>Sign in to Twitter</h1>
           <GoogleButton />
@@ -58,6 +67,7 @@ const SignIn = () => {
             variant="outlined"
             value={email}
           />
+
           <Button
             onClick={onclick}
             className={styles.btn}
@@ -72,7 +82,9 @@ const SignIn = () => {
           >
             Next
           </Button>
+
           <Button
+            onClick={forgothandle}
             className={styles.btn}
             variant="outlined"
             sx={{
@@ -84,17 +96,19 @@ const SignIn = () => {
           >
             <b>Forgot Password?</b>
           </Button>
+
           <div style={{ marginTop: "2rem", opacity: 0.8 }}>
             <b>Don't have an account? </b>
             <Link to="/register">Sign up</Link>
           </div>
           <div className={styles.Alert}>
-            {usererr ? (
+            {usererr ? handlenavigate() : " "}
+            {alert ? (
               <Alert severity="info">
                 <strong>Sorry, we could not find your account.</strong>
               </Alert>
             ) : (
-              handlenavigate()
+              " "
             )}
           </div>
         </div>
