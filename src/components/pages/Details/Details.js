@@ -4,13 +4,24 @@ import DetailsText from "./detailsText";
 import GroupedSelect from "../../atoms/inputField/select";
 import SignUpButton from "../../atoms/button/signup";
 import OutlinedInput from "@mui/material/OutlinedInput";
+import Alert from "@mui/material/Alert";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Details() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [useEmail, setUseEmail] = useState("");
+
+  const [nevigate, setnevigate] = useState(false);
+  const [alert, setalert] = useState(false);
+
+  const nevigates = useNavigate();
+
+  function navigate() {
+    nevigates("/login");
+  }
 
   const Storage = localStorage.getItem("signupData")
     ? JSON.parse(localStorage.getItem("signupData"))
@@ -29,6 +40,19 @@ export default function Details() {
     };
 
     localStorage.setItem("signupData", JSON.stringify([...Storage, temp]));
+
+    const email_regex =
+      /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
+    if (
+      name === "" ||
+      (phone.length < 10 && email_regex.test(email) === false)
+    ) {
+      setnevigate(false);
+      setalert(true);
+    } else {
+      setnevigate(true);
+    }
   }
 
   return (
@@ -85,6 +109,14 @@ export default function Details() {
       </div>
       <div className={styles.btn}>
         <SignUpButton handleSignup={handleSignup} />
+        {nevigate ? navigate() : " "}
+        {alert ? (
+          <Alert severity="info">
+            <strong>Fill Properly.</strong>
+          </Alert>
+        ) : (
+          " "
+        )}
       </div>
     </div>
   );

@@ -10,15 +10,20 @@ import Alert from "@mui/material/Alert";
 
 export default function Password() {
   const navigate = useNavigate();
+
   const [password, setpassword] = useState("");
   const [message, setmessage] = useState(false);
+
   function handleChange(e) {
     setpassword(e.target.value);
   }
+
   function handleClick() {
     const validation = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
     if (!validation.test(password)) {
       setmessage(true);
+    } else {
+      navigate("/home");
     }
   }
 
@@ -46,7 +51,7 @@ export default function Password() {
             />
             <div className={styles.password}>
               {" "}
-              <Link to=""> Forgot Password?</Link>
+              <Link to="/forgot"> Forgot Password?</Link>
             </div>
           </div>
           <Button
@@ -74,7 +79,7 @@ export default function Password() {
               Password Invalid <strong>Please Try Again</strong>
             </Alert>
           ) : (
-            ""
+            " "
           )}
         </div>
       </div>
