@@ -15,7 +15,7 @@ export default function SearchBarTwitter() {
           borderRadius: "15px",
           backgroundColor: "whitesmoke",
           alignItems: "center",
-          width: 400,
+          width: 340,
         }}
       >
         <IconButton type="button" sx={{ p: "10px" }} aria-label="search">

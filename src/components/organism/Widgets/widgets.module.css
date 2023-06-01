@@ -1,21 +1,37 @@
 .Home {
-    border: 1rem solid white;
-    display: flex;
-    flex-direction: column;
-    align-items: end;
-  }
+  margin-left: 15rem;
+  border: 1rem solid white;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.SearchBarTwitter {
+  margin-right: -2%;
+  border: 1rem solid white;
   
-  .SearchBarTwitter {
-    border: 1rem solid white;
-  }
-  
-  .Trending {
-    margin: auto;
-    margin-right: 1%;
-    border: 1rem solid whitesmoke;
-    background-color: whitesmoke;
-    border-radius: 15px;
-    width: 24rem;
-    height: 25rem;
-  }
+}
+
+.Trending {
+  border: 1rem solid white;
+  margin: auto;
+  margin-right: 1%;
+  border: 1rem solid whitesmoke;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  width: 20rem;
+  height: 25rem;
+  margin-top: 1rem;
+}
+.Follow{
+  border: 1rem solid white;
+  margin: auto;
+  margin-right: 1%;
+  border: 1rem solid whitesmoke;
+  background-color: whitesmoke;
+  border-radius: 15px;
+  width: 20rem;
+  height: 25rem;
+  margin-top: 2rem;
+}
   

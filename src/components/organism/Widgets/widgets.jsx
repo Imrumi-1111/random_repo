@@ -2,10 +2,11 @@ import React, { Fragment } from "react";
 import styles from "./widgets.module.css"
 import SearchBarTwitter from "../../atoms/searchbar/searchbar";
 import Trending from "../../molecules/trending/trending";
+import Follow from "../../molecules/follow/follow";
 
 function Widgets() {
   return (
-    <div>
+    
       <Fragment>
         <div className={styles.Home}>
           <div className={styles.SearchBarTwitter}>
@@ -14,9 +15,10 @@ function Widgets() {
           <div className={styles.Trending}>
             <Trending />
           </div>
+          <div className={styles.Follow}><Follow/></div>
         </div>
       </Fragment>
-    </div>
+    
   );
 }
 

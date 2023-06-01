@@ -1,4 +1,6 @@
 .Trend {
-  margin-top: 2%;
-  margin-right: 13rem;
+  margin-top: -1rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
 }
