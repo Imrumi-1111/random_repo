@@ -11,11 +11,13 @@ import ListAltIcon from "@mui/icons-material/ListAlt";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
 import { Button } from "@mui/material";
-import { useNavigate } from "react-router-dom";
-//import ColorToggleButton from "../../atoms/button/logout/logout";
+import Logout from "../../atoms/button/logout/logout";
 
-function Sidebar({handleLogout}) {
- const navigate = useNavigate()
+function Sidebar() {
+ 
+ function handleLogout(){
+  console.log(Logout)
+ }
   return (
     <div className={styles.sidebar}>
       <TwitterIcon className={styles.sidebar_twitter_logo}/>
@@ -45,16 +47,10 @@ function Sidebar({handleLogout}) {
       >
         Tweet
       </Button>
-      {/* <div className={styles.Logout}><ColorToggleButton/></div> */}
-      <div className={styles.Logout}>
-        <SidebarOption Icon={MoreHorizIcon} text="Logout"
-      onClick = {() => {
-        navigate("/logout");
-        handleLogout()
-      }}
-      />
+      
+      <Logout onLogout={handleLogout} />
       </div>
-    </div>
+    
   );
 }
 

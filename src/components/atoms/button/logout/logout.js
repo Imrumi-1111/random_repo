@@ -1,19 +1,38 @@
-import { useState,Fragment } from "react"
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './logout.module.css'
-//import { Modal } from "@mui/material"
-//import Modal from 'react-modal'
 
-export default function LogoutText(){
-    const [logout, setLogout] = useState("")
+export default function Logout({ onLogout }) {
+  const [showConfirmation, setShowConfirmation] = useState(false);
 
-    function handleLogout(){
-        
-    }
-    
-    return(
-        <Fragment>
-        <div className={styles.LogoutText}>Add Existing Account</div>
-        <div className={styles.LogoutText}>Logout ayushw@gmail.com</div>
-        </Fragment>
-    )
-}
+  const navigate = useNavigate();
+
+  function handleLogout(){
+    setShowConfirmation(false);
+    onLogout();
+    navigate('/login')
+  };
+
+  function handleLogoutConfirmation(){
+    setShowConfirmation(true);
+  };
+
+  return (
+    <div>
+      <div>
+       
+      </div>
+      {showConfirmation ? (
+        <div className="logout-confirmation">
+          <div onClick={handleLogout}><p>logout ayushw@gmail.com</p></div>
+          <div><p>Add another existing account</p></div>
+          <button >Logout</button>
+          
+        </div>
+      ) : (
+        <button onClick={handleLogoutConfirmation}>Logout</button>
+      )}
+    </div>
+  );
+};
+
